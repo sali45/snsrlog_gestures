@@ -1,7 +1,7 @@
 import csv
 
-txt_file = r"PickUpPhoneAccelerometer1.txt"
-csv_file = r"PickUpPhoneAccelerometer1.csv"
+txt_file = r"Wave3Accelerometer.txt"
+csv_file = r"Wave3Accelerometer.csv"
 
 # use 'with' if the program isn't going to immediately terminate
 # so you don't leave files open
