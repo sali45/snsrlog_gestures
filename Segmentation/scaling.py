@@ -1,21 +1,40 @@
 import numpy as np
-from sliding_window import window
+import pandas as pd
+from sklearn import preprocessing
+from segmentation import segment_energy
+
+files = [
+    'PickUpPhoneAccelerometer1.csv',
+    'PickUpPhoneAccelerometer2.csv',
+    'PickUpPhoneAccelerometer3.csv',
+    'Wave1Accelerometer.csv',
+    'Wave2Accelerometer.csv',
+    'Wave3Accelerometer.csv'
+]
 
 
 def scaling(filename, col):
     data = np.loadtxt(filename, delimiter=',')
     acc_d = data.transpose()[col]
-    acc_d_normed = (acc_d - acc_d.min(axis=0)) / acc_d.ptp(axis=0)
+    acc_d_normed = preprocessing.scale(acc_d)
     return acc_d_normed
 
-print "Acc_1_x: " + str(list(window(scaling('PickUpPhoneAccelerometer1.csv', 2), 5)))
-print "Acc_1_y: " + str(list(window(scaling('PickUpPhoneAccelerometer1.csv', 3), 5)))
-print "Acc_1_z: " + str(list(window(scaling('PickUpPhoneAccelerometer1.csv', 4), 5)))
 
-print "Acc_2_x: " + str(list(window(scaling('PickUpPhoneAccelerometer2.csv', 2), 5)))
-print "Acc_2_y: " + str(list(window(scaling('PickUpPhoneAccelerometer2.csv', 3), 5)))
-print "Acc_2_z: " + str(list(window(scaling('PickUpPhoneAccelerometer2.csv', 4), 5)))
+def acc_data(filename):
+    data = [[], [], []]
+    # 2nd column has Acc_x data, 3rd has Acc_y data, 4th has Acc_z data
+    for i in range(2, 5):
+        data[i - 2].append(scaling(filename, i))
+    return data
 
-print "Acc_3_x: " + str(list(window(scaling('PickUpPhoneAccelerometer3.csv', 2), 5)))
-print "Acc_3_y: " + str(list(window(scaling('PickUpPhoneAccelerometer3.csv', 3), 5)))
-print "Acc_3_z: " + str(list(window(scaling('PickUpPhoneAccelerometer3.csv', 4), 5)))
+
+def label(filename):
+    # Column 5 has the label value.
+    data = np.array(pd.read_csv(filename, usecols=[5]))
+    return data[0]
+
+for f in files:
+    print label(f)
+    print acc_data(f)
+    print "\n"
+    segment_energy(acc_data(f), 2)
