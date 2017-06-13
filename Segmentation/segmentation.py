@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-import csv
 from Preprocessing import sample_difference as sd
 
 files = [
@@ -16,6 +15,7 @@ files = [
 
 def segment_energy(data, th):
     mag = np.array([np.linalg.norm(data['x']), np.linalg.norm(data['y']), np.linalg.norm(data['z'])])
+    print "This is the mag: " + str(mag)
     mag -= np.mean(mag)
 
     above = np.where(mag >= th*np.std(mag))
@@ -28,4 +28,3 @@ def segment_energy(data, th):
 for f in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", f), 'rU') as my_file:
         segment_energy(sd.sample_difference(my_file), 2)
-
