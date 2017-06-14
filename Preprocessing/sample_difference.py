@@ -16,13 +16,4 @@ files = [
 def sample_difference(filename):
     df = pd.read_csv(filename, header=None, names=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
     df.assign(dx=df.x.diff(), dy=df.y.diff(), dz=df.z.diff())
-    array = df.values
-    pca = PCA(n_components=3)
-    fit = pca.fit_transform(array)
-    plt.plot(fit)
-    plt.show()
     return df
-
-for f in files:
-    with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", f), 'rU') as my_file:
-        sample_difference(my_file)

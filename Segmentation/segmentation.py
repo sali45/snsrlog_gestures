@@ -21,9 +21,9 @@ def segment_energy(data, th):
     above = np.where(mag >= th*np.std(mag))
     indicator = np.zeros(mag.shape)
     indicator[above] = 1
-    plt.plot(mag)
-    plt.plot(indicator * 1000, 'r')
-    plt.show()
+    # plt.plot(mag)
+    # plt.plot(indicator * 1000, 'r')
+    # plt.show()
 
 for f in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", f), 'rU') as my_file:
