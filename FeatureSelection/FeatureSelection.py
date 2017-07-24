@@ -1,8 +1,8 @@
 import os
 from Preprocessing.Denoising import sample_difference
-from Segmentation.segmentation import segment_energy
+from Segmentation.segmentation import sliding_window
 import numpy as np
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from statsmodels.distributions.empirical_distribution import ECDF
 
@@ -20,7 +20,6 @@ def ecdf_representation(D, n):
     """calculate ECDF from D at n points"""
     m = np.mean(D)
     X = []
-    print D
     for d in xrange(D.shape[1] + 1):
         func = ECDF(([D[:, d] + np.random.randn(np.shape(D[:, d])) * 0.01]))
         ll = func(np.linspace(0, 1, n))
@@ -31,10 +30,16 @@ def ecdf_representation(D, n):
     return X
 
 
-def lda():
-    return LDA(n_components=1)
+def principal_components(df):
+    df = df.dropna(how='any')
+    pca = PCA(n_components=2)
+    result = pca.fit_transform(df[['x', 'y', 'z']])
+    # plt.plot(result)
+    # plt.show()
+    return result
+
 
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
               'rU') as my_file:
-        ecdf_representation(segment_energy(sample_difference(my_file), 2), 13)
+        principal_components(sliding_window(sample_difference(my_file), 50, 25))

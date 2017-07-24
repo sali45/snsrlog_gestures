@@ -2,6 +2,8 @@ import os
 from Preprocessing.Denoising import sample_difference
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
+
 
 files = [
     'PickUpPhoneAccelerometer1.csv',
@@ -22,16 +24,21 @@ def segment_energy(data, th):
     indicator = np.zeros(mag.shape)
     indicator[above] = 1
     print indicator
-    # plt.plot(mag)
-    # plt.plot(indicator * 1000, 'r')
-    # plt.show()
-    # indicator *= 1000
-    # m = indicator != 0
-    # out = np.split(indicator, np.flatnonzero(m[1:] != m[:-1]) + 1)
+    plt.plot(mag)
+    plt.plot(indicator * 1000, 'r')
+    plt.show()
+    indicator *= 1000
+    m = indicator != 0
+    out = np.split(indicator, np.flatnonzero(m[1:] != m[:-1]) + 1)
     return indicator
+
+
+def sliding_window(data, window_size, step_size):
+    data = pd.rolling_window(data, window_size)
+    return data[step_size - 1::step_size]
 
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
               'rU') as my_file:
-        segment_energy(sample_difference(my_file), 2)
+        sliding_window(sample_difference(my_file), 100, 50)
 
