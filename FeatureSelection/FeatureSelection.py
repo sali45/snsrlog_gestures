@@ -9,9 +9,9 @@ from statsmodels.distributions.empirical_distribution import ECDF
 files = [
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
+    'PickUpPhoneAccelerometer3.csv',
     'Wave1Accelerometer.csv',
     'Wave2Accelerometer.csv',
-    'PickUpPhoneAccelerometer3.csv',
     'Wave3Accelerometer.csv'
 ]
 
@@ -34,12 +34,12 @@ def principal_components(df):
     df = df.dropna(how='any')
     pca = PCA(n_components=2)
     result = pca.fit_transform(df[['x', 'y', 'z']])
-    # plt.plot(result)
-    # plt.show()
+    plt.plot(result)
+    plt.show()
     return result
 
 
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
               'rU') as my_file:
-        principal_components(sliding_window(sample_difference(my_file), 50, 25))
+        principal_components(sliding_window(sample_difference(my_file), 100, 50))

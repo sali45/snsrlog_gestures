@@ -8,9 +8,9 @@ import pandas as pd
 files = [
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
+    'PickUpPhoneAccelerometer3.csv',
     'Wave1Accelerometer.csv',
     'Wave2Accelerometer.csv',
-    'PickUpPhoneAccelerometer3.csv',
     'Wave3Accelerometer.csv'
 ]
 
@@ -30,7 +30,7 @@ def segment_energy(data, th):
     indicator *= 1000
     m = indicator != 0
     out = np.split(indicator, np.flatnonzero(m[1:] != m[:-1]) + 1)
-    return indicator
+    return out
 
 
 def sliding_window(data, window_size, step_size):
