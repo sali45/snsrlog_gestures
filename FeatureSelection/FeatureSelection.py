@@ -34,17 +34,18 @@ def ecdf_representation(D, n):
     return X
 
 
-def principal_components():
+def principal_components(window_size, step_size):
     df = pd.DataFrame(columns=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
     for my_files in files:
         with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
                   'rU') as my_file:
             df = df.append(sample_difference(my_file))
     pca = PCA(n_components=2)
-    print df
-    # result = pca.fit_transform(df[['x', 'y', 'z']])
+    print pd.rolling_window(df, 50)
+    #pca.fit(pd.rolling_window(df, 50, win_type='boxcar'))
+    # result = pca.fit(df['x', 'y', 'z'])
     # plt.plot(result)
     # plt.show()
     # return result
 
-principal_components()
+principal_components('50s', '25s')

@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08cef4a5-6fd9-49a5-8148-2e4f50f5ed2f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classification/HMM.py" afterPath="$PROJECT_DIR$/Classification/HMM.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle1Accelerometer.csv" afterPath="$PROJECT_DIR$/Data/Circle1Accelerometer.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle2Accelerometer.csv" afterPath="$PROJECT_DIR$/Data/Circle2Accelerometer.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle3Accelerometer.csv" afterPath="$PROJECT_DIR$/Data/Circle3Accelerometer.csv" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/Circle1Accelerometer.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/Circle2Accelerometer.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Data/Circle3Accelerometer.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle1Accelerometer.txt" afterPath="$PROJECT_DIR$/Data/Circle1Accelerometer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle2Accelerometer.txt" afterPath="$PROJECT_DIR$/Data/Circle2Accelerometer.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/Circle3Accelerometer.txt" afterPath="$PROJECT_DIR$/Data/Circle3Accelerometer.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FeatureSelection/FeatureSelection.py" afterPath="$PROJECT_DIR$/FeatureSelection/FeatureSelection.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/Denoising.py" afterPath="$PROJECT_DIR$/Preprocessing/Denoising.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Preprocessing/text_to_csv.py" afterPath="$PROJECT_DIR$/Preprocessing/text_to_csv.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Segmentation/segmentation.py" afterPath="$PROJECT_DIR$/Segmentation/segmentation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,14 +23,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="segmentation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Segmentation/segmentation.py">
+      <file leaf-file-name="Circle3Accelerometer.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/Circle3Accelerometer.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -34,32 +36,20 @@
       <file leaf-file-name="text_to_csv.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Preprocessing/text_to_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeatureSelection.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FeatureSelection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FeatureSelection/FeatureSelection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+            <state relative-caret-position="385">
+              <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HMM.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classification/HMM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Circle2Accelerometer.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/Circle2Accelerometer.csv">
+      <file leaf-file-name="Denoising.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/Denoising.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -95,14 +97,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Denoising.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Preprocessing/Denoising.py">
+      <file leaf-file-name="PickUpPhoneAccelerometer1.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer1.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="126" lean-forward="false" selection-start-line="19" selection-start-column="115" selection-end-line="19" selection-end-column="126" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PickUpPhoneAccelerometer2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PickUpPhoneAccelerometer3.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,14 +179,17 @@
         <option value="$PROJECT_DIR$/Preprocessing/sample_difference.py" />
         <option value="$PROJECT_DIR$/FeatureSelection/LDA.py" />
         <option value="$PROJECT_DIR$/Data/text_to_csv.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/text_to_csv.py" />
-        <option value="$PROJECT_DIR$/Preprocessing/Denoising.py" />
-        <option value="$PROJECT_DIR$/Segmentation/segmentation.py" />
         <option value="$PROJECT_DIR$/Classification/HMM.py" />
         <option value="$PROJECT_DIR$/Data/Circle1Accelerometer.csv" />
         <option value="$PROJECT_DIR$/Data/Circle2Accelerometer.csv" />
         <option value="$PROJECT_DIR$/Data/Circle3Accelerometer.csv" />
+        <option value="$PROJECT_DIR$/Segmentation/segmentation.py" />
         <option value="$PROJECT_DIR$/FeatureSelection/FeatureSelection.py" />
+        <option value="$PROJECT_DIR$/Data/Circle3Accelerometer.txt" />
+        <option value="$PROJECT_DIR$/Data/Circle2Accelerometer.txt" />
+        <option value="$PROJECT_DIR$/Data/Circle1Accelerometer.txt" />
+        <option value="$PROJECT_DIR$/Preprocessing/text_to_csv.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/Denoising.py" />
       </list>
     </option>
   </component>
@@ -214,6 +237,11 @@
               <item name="sensorLogProject" type="462c0819:PsiDirectoryNode" />
               <item name="Preprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sensorLogProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sensorLogProject" type="462c0819:PsiDirectoryNode" />
+              <item name="Segmentation" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -248,7 +276,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.FeatureSelection">
+  <component name="RunManager" selected="Python.sample_difference">
     <configuration name="FeatureSelection" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -407,11 +435,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.FeatureSelection" />
-        <item index="1" class="java.lang.String" itemvalue="Python.HMM" />
-        <item index="2" class="java.lang.String" itemvalue="Python.sample_difference" />
-        <item index="3" class="java.lang.String" itemvalue="Python.text_to_csv" />
-        <item index="4" class="java.lang.String" itemvalue="Python.segmentation" />
+        <item index="0" class="java.lang.String" itemvalue="Python.sample_difference" />
+        <item index="1" class="java.lang.String" itemvalue="Python.FeatureSelection" />
+        <item index="2" class="java.lang.String" itemvalue="Python.text_to_csv" />
+        <item index="3" class="java.lang.String" itemvalue="Python.segmentation" />
+        <item index="4" class="java.lang.String" itemvalue="Python.HMM" />
       </list>
     </recent_temporary>
   </component>
@@ -444,14 +472,14 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28109854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27382874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30536452" sideWeight="0.52584815" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30536452" sideWeight="0.47415185" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30536452" sideWeight="0.5323102" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30536452" sideWeight="0.4676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.4838449" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.4806139" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39863014" sideWeight="0.49353796" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -504,16 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Preprocessing/Aggregation.py" />
-    <entry file="file://$PROJECT_DIR$/Segmentation/sqlite.py" />
-    <entry file="file://$PROJECT_DIR$/Classification/NeuralNet.py" />
-    <entry file="file://$PROJECT_DIR$/Data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Wave1Accelerometer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -536,29 +554,8 @@
     <entry file="file://$PROJECT_DIR$/Segmentation/Wave2Accelerometer.csv" />
     <entry file="file://$PROJECT_DIR$/Segmentation/Wave1Accelerometer.csv" />
     <entry file="file://$PROJECT_DIR$/Segmentation/PickUpPhoneAccelerometer3.csv" />
-    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Segmentation/PickUpPhoneAccelerometer2.txt" />
     <entry file="file://$PROJECT_DIR$/Segmentation/PickUpPhoneAccelerometer2.csv" />
-    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/site-packages/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -576,13 +573,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Segmentation/PickUpPhoneAccelerometer1.csv" />
     <entry file="file://$PROJECT_DIR$/Segmentation/sample_difference.py" />
-    <entry file="file://$PROJECT_DIR$/Preprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/site-packages/pandas/io/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -633,13 +623,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data/Wave1Accelerometer.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Wave2Accelerometer.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -702,13 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer1.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classification/HMM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -719,35 +695,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/text_to_csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Preprocessing/Denoising.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="126" lean-forward="false" selection-start-line="19" selection-start-column="115" selection-end-line="19" selection-end-column="126" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Segmentation/segmentation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="47" />
+        <state relative-caret-position="380">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/Circle1Accelerometer.csv">
+    <entry file="file://$PROJECT_DIR$/Data/Wave2Accelerometer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Circle2Accelerometer.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Circle1Accelerometer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -763,7 +737,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Data/Circle3Accelerometer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/text_to_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Circle3Accelerometer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Circle3Accelerometer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -773,10 +795,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FeatureSelection/FeatureSelection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="385">
+          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/PickUpPhoneAccelerometer1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="27" lean-forward="false" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/Circle1Accelerometer.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preprocessing/Denoising.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

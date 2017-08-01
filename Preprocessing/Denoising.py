@@ -17,7 +17,9 @@ files = [
 
 
 def sample_difference(filename):
-    df = pd.read_csv(filename, header=None, names=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
+    df = pd.read_csv(filename, header=None, names=['timestamp', 'time skipped', 'x', 'y', 'z', 'label'], skipinitialspace=True)
+    df.timestamp = pd.to_datetime(df.timestamp)  # Convert column type to be datetime
+    df = df.set_index(['timestamp'])
     df.assign(dx=df.x.diff(), dy=df.y.diff(), dz=df.z.diff())
     # plt.plot(df['x'])
     # plt.plot(df['y'])

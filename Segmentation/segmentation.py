@@ -36,14 +36,16 @@ def segment_energy(data, th):
     return out
 
 
-def sliding_window(data, window_size, step_size):
-    data = pd.rolling_window(data, window_size)
-    print data
-    print data[step_size - 1::step_size]
-    return data[step_size - 1::step_size]
+def sliding_window(df, window_size):
+    df['timestamp'] = pd.to_datetime(df['timestamp'])  # Convert column type to be datetime
+    indexed_df = df.set_index(['timestamp'])  # Create a datetime index
+    indexed_df.rolling(window_size)  # Create rolling windows
+    print df
 
-for my_files in files:
-    with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
-              'rU') as my_file:
-        sliding_window(sample_difference(my_file), 50, 25)
+# for my_files in files:
+
+
+# with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", "PickUpPhoneAccelerometer1.csv"),
+#           'rU') as my_file:
+#     sliding_window(sample_difference(my_file), 50)
 
