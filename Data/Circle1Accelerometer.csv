@@ -1,22 +1,3 @@
-% Accelerometer data recorded with 'snsrlog'
-% 
-% Sampling frequency: 100 Hz
-% 
-% Label description:
-% , 0: Default Label
-% , 1: pick up phone
-% , 2: wave
-% , 3: circle
-% 
-% Column description:
-% , 1: Seconds.milliseconds since 1970
-% , 2: Number of skipped measurements
-% , 3: Acceleration value in x-direction
-% , 4: Acceleration value in y-direction
-% , 5: Acceleration value in z-direction
-% , 6: Label used for the current sample
-% 
-% 
 1501514704.745, 0, -0.055908, -0.729034, -0.645294, 3
 1501514704.755, 0, -0.046158, -0.709091, -0.650177, 3
 1501514704.765, 0, -0.036469, -0.699554, -0.672668, 3
@@ -557,3 +538,4 @@
 1501514710.116, 0, 0.184067, -0.693420, -0.710953, 3
 1501514710.126, 0, 0.158218, -0.709335, -0.741623, 3
 1501514710.136, 0, 0.153351, -0.720200, -0.709183, 3
+

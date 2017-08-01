@@ -4,6 +4,9 @@ import os
 
 
 files = [
+    'Circle1Accelerometer.csv',
+    'Circle2Accelerometer.csv',
+    'Circle3Accelerometer.csv',
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
     'PickUpPhoneAccelerometer3.csv',
@@ -25,4 +28,4 @@ def sample_difference(filename):
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
               'rU') as my_file:
-        sample_difference(my_file), 2
+        sample_difference(my_file)

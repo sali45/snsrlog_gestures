@@ -5,8 +5,12 @@ import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from statsmodels.distributions.empirical_distribution import ECDF
+import pandas as pd
 
 files = [
+    'Circle1Accelerometer.csv',
+    'Circle2Accelerometer.csv',
+    'Circle3Accelerometer.csv',
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
     'PickUpPhoneAccelerometer3.csv',
@@ -30,16 +34,17 @@ def ecdf_representation(D, n):
     return X
 
 
-def principal_components(df):
-    df = df.dropna(how='any')
+def principal_components():
+    df = pd.DataFrame(columns=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
+    for my_files in files:
+        with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
+                  'rU') as my_file:
+            df = df.append(sample_difference(my_file))
     pca = PCA(n_components=2)
-    result = pca.fit_transform(df[['x', 'y', 'z']])
-    plt.plot(result)
-    plt.show()
-    return result
+    print df
+    # result = pca.fit_transform(df[['x', 'y', 'z']])
+    # plt.plot(result)
+    # plt.show()
+    # return result
 
-
-for my_files in files:
-    with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
-              'rU') as my_file:
-        principal_components(sliding_window(sample_difference(my_file), 100, 50))
+principal_components()

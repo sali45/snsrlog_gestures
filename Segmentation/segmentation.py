@@ -6,6 +6,9 @@ import pandas as pd
 
 
 files = [
+    'Circle1Accelerometer.csv',
+    'Circle2Accelerometer.csv',
+    'Circle3Accelerometer.csv',
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
     'PickUpPhoneAccelerometer3.csv',
@@ -35,10 +38,12 @@ def segment_energy(data, th):
 
 def sliding_window(data, window_size, step_size):
     data = pd.rolling_window(data, window_size)
+    print data
+    print data[step_size - 1::step_size]
     return data[step_size - 1::step_size]
 
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
               'rU') as my_file:
-        sliding_window(sample_difference(my_file), 100, 50)
+        sliding_window(sample_difference(my_file), 50, 25)
 
