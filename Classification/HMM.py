@@ -1,32 +1,18 @@
-from hmmlearn import hmm
-import matplotlib.pyplot as plt
 from FeatureSelection.FeatureSelection import principal_components
-from Segmentation.segmentation import sliding_window
-from Preprocessing.Denoising import sample_difference
-import os
-
-files = [
-    'Circle1Accelerometer.csv',
-    'Circle2Accelerometer.csv',
-    'Circle3Accelerometer.csv',
-    'PickUpPhoneAccelerometer1.csv',
-    'PickUpPhoneAccelerometer2.csv',
-    'PickUpPhoneAccelerometer3.csv',
-    'Wave1Accelerometer.csv',
-    'Wave2Accelerometer.csv',
-    'Wave3Accelerometer.csv'
-]
+from pomegranate import *
+import numpy as np
 
 
-def HMM(data):
-    model = hmm.GaussianHMM(n_components=3, covariance_type="full", n_iter=100)
-    model.fit(data)
-    Z = model.predict(data)
-    print Z
-    return Z
+def hidden_markov_model(training, test):
+    X = np.array(training)
+    y = np.array([0, 1, 2])
 
-for my_files in files:
-    with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
-              'rU') as my_file:
-        HMM(principal_components(sliding_window(sample_difference(my_file), 50, 25)))
+    model_circle = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 4, X[y == 0])
+    model_wave = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 4, X[y == 1])
+    model_pickup = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 2, X[y == 2])
 
+    model = BayesClassifier([model_circle, model_wave, model_pickup])
+    Z = model.predict(test)
+    numpy.savetxt("FILENAME.csv", Z.reshape(1,-1), fmt='%d', delimiter=",")
+
+hidden_markov_model(principal_components()[0], principal_components()[1])

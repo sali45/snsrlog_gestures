@@ -2,6 +2,7 @@ import os
 from Preprocessing.Denoising import sample_difference
 import numpy as np
 import matplotlib.pyplot as plt
+from numpy.lib.stride_tricks import as_strided as ast
 import pandas as pd
 
 
@@ -36,16 +37,26 @@ def segment_energy(data, th):
     return out
 
 
-def sliding_window(df, window_size):
-    df['timestamp'] = pd.to_datetime(df['timestamp'])  # Convert column type to be datetime
-    indexed_df = df.set_index(['timestamp'])  # Create a datetime index
-    indexed_df.rolling(window_size)  # Create rolling windows
-    print df
+def sliding_window(arr, ws, ss):
+    r = np.arange(len(arr))
+    s = r[::ss]
+    z = list(zip(s, s + ws))
+    f = '{0[0]}:{0[1]}'.format
+    g = lambda t: arr.iloc[t[0]:t[1]]
+    return map(g, z)
 
-# for my_files in files:
 
+def window(a, w=4, o=2, copy=False):
+    sh = (a.size - w + 1, w)
+    st = a.strides * 2
+    view = np.lib.stride_tricks.as_strided(a, strides=st, shape=sh)[0::o]
+    if copy:
+        return view.copy()
+    else:
+        return view
 
-# with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", "PickUpPhoneAccelerometer1.csv"),
-#           'rU') as my_file:
-#     sliding_window(sample_difference(my_file), 50)
+for f in files:
+    with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", f),
+              'rU') as my_file:
+        sliding_window(sample_difference(my_file), 50, 25)
 

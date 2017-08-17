@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import os
 
 
@@ -17,15 +16,12 @@ files = [
 
 
 def sample_difference(filename):
-    df = pd.read_csv(filename, header=None, names=['timestamp', 'time skipped', 'x', 'y', 'z', 'label'], skipinitialspace=True)
+    df = pd.read_csv(filename, header=None, names=['timestamp', 'time skipped', 'x', 'y', 'z', 'label'],
+                     skipinitialspace=True)
     df.timestamp = pd.to_datetime(df.timestamp)  # Convert column type to be datetime
     df = df.set_index(['timestamp'])
     df.assign(dx=df.x.diff(), dy=df.y.diff(), dz=df.z.diff())
-    # plt.plot(df['x'])
-    # plt.plot(df['y'])
-    # plt.plot(df['z'])
-    # plt.show()
-    return df
+    return df[['x', 'y', 'z']]
 
 for my_files in files:
     with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),

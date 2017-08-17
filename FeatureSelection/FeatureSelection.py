@@ -6,16 +6,21 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from statsmodels.distributions.empirical_distribution import ECDF
 import pandas as pd
+import warnings
 
-files = [
+
+training_files = [
     'Circle1Accelerometer.csv',
     'Circle2Accelerometer.csv',
-    'Circle3Accelerometer.csv',
     'PickUpPhoneAccelerometer1.csv',
     'PickUpPhoneAccelerometer2.csv',
-    'PickUpPhoneAccelerometer3.csv',
     'Wave1Accelerometer.csv',
     'Wave2Accelerometer.csv',
+]
+
+test_files = [
+    'Circle3Accelerometer.csv',
+    'PickUpPhoneAccelerometer3.csv',
     'Wave3Accelerometer.csv'
 ]
 
@@ -34,18 +39,25 @@ def ecdf_representation(D, n):
     return X
 
 
-def principal_components(window_size, step_size):
-    df = pd.DataFrame(columns=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
+def windows(files):
+    x = []
     for my_files in files:
-        with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files),
-                  'rU') as my_file:
-            df = df.append(sample_difference(my_file))
-    pca = PCA(n_components=2)
-    print pd.rolling_window(df, 50)
-    #pca.fit(pd.rolling_window(df, 50, win_type='boxcar'))
-    # result = pca.fit(df['x', 'y', 'z'])
-    # plt.plot(result)
-    # plt.show()
-    # return result
+        df = pd.DataFrame(columns=['timestamp', 'time skipped', 'x', 'y', 'z', 'label']).set_index('timestamp')
+        with open(os.path.join("/Users", "saqibali", "PycharmProjects", "sensorLogProject", "Data", my_files), 'rU')\
+                as my_file:
+            for d in sliding_window(sample_difference(my_file), 500, 250):
+                df = df.append(d)
+        x = np.append(x, df[['x', 'y', 'z']].values.tolist)
+    return x
 
-principal_components('50s', '25s')
+
+def principal_components():
+    pca = PCA(n_components=2)
+    print type(windows(training_files))
+    training_result = pca.fit_transform(windows(training_files))
+    print type(training_result)
+    testing_result = pca.transform(windows(test_files))
+    return training_result, testing_result
+
+warnings.filterwarnings("ignore")
+principal_components()
