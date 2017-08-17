@@ -11,11 +11,8 @@ import warnings
 
 training_files = [
     'Circle1Accelerometer.csv',
-    'Circle2Accelerometer.csv',
     'PickUpPhoneAccelerometer1.csv',
-    'PickUpPhoneAccelerometer2.csv',
     'Wave1Accelerometer.csv',
-    'Wave2Accelerometer.csv',
 ]
 
 test_files = [
@@ -47,17 +44,19 @@ def windows(files):
                 as my_file:
             for d in sliding_window(sample_difference(my_file), 500, 250):
                 df = df.append(d)
-        x = np.append(x, df[['x', 'y', 'z']].values.tolist)
-    return x
+        x.append(df[['x', 'y', 'z']].values)
+    return np.array(x)
 
 
 def principal_components():
     pca = PCA(n_components=2)
-    print type(windows(training_files))
-    training_result = pca.fit_transform(windows(training_files))
-    print type(training_result)
-    testing_result = pca.transform(windows(test_files))
-    return training_result, testing_result
+    training_result = []
+    for window in windows(training_files):
+        training_result.append(pca.fit_transform(window))
+    testing_result = []
+    for window in windows(test_files):
+        testing_result.append(pca.transform(window))
+    return np.array(training_result), np.array(testing_result)
 
 warnings.filterwarnings("ignore")
 principal_components()

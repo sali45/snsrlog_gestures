@@ -42,7 +42,7 @@ def sliding_window(arr, ws, ss):
     s = r[::ss]
     z = list(zip(s, s + ws))
     f = '{0[0]}:{0[1]}'.format
-    g = lambda t: arr.iloc[t[0]:t[1]]
+    g = lambda ss: arr.iloc[ss[0]:ss[1]]
     return map(g, z)
 
 

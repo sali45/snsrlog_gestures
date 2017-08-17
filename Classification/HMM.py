@@ -8,7 +8,7 @@ def hidden_markov_model(training, test):
     y = np.array([0, 1, 2])
 
     model_circle = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 4, X[y == 0])
-    model_wave = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 4, X[y == 1])
+    model_wave = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 5, X[y == 1])
     model_pickup = HiddenMarkovModel.from_samples(MultivariateGaussianDistribution, 2, X[y == 2])
 
     model = BayesClassifier([model_circle, model_wave, model_pickup])
